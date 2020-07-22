@@ -25,21 +25,6 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col header">
-        <h1>Cody's Simple Checklist</h1>
-        <p>1. Enter a task or item into the field, then press the button to add it.</p>
-        <p>2. When completed, tap/click the item and it will move to the "checked off" list. If you change your mind you can always put the item back.</p>
-        <p>3. To clear all checked items, simply hit the "Clear Checked Items" button.</p>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col heading">
-        <h2><%=dayOfWeek%></h2>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
       <div class="col">
         <% for (var i = 0; i < listItems.length ; i++) { %>
         <div class="item">
@@ -51,6 +36,17 @@
       </div>
     </div>
     <hr>
+    <div class="row">
+      <div class="col">
+        <% for (var i = 0; i < listCheckedItems.length ; i++) { %>
+        <div class="item">
+          <form class="" action="/" method="post">
+            <button type="submit" name="checkedItem" value="<%= listCheckedItems[i] %>" class="btn itemText item-checked"><%= listCheckedItems[i] %></label>
+          </form>
+        </div>
+        <% } %>
+      </div>
+    </div>
     <form class="" action="/" method="post">
     <div class="row">
         <div class="col-md-10">
@@ -70,20 +66,23 @@
     </div>
     <div class="row">
       <div class="col">
-        <% for (var i = 0; i < listCheckedItems.length ; i++) { %>
-        <div class="item">
-          <form class="" action="/" method="post">
-            <button type="submit" name="checkedItem" value="<%= listCheckedItems[i] %>" class="btn itemText item-checked"><%= listCheckedItems[i] %></label>
-          </form>
-        </div>
-        <% } %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
         <form class="" action="/" method="post">
           <button type="submit" name="clearChecked" class="btn btn-add clear">Clear Checked Items</button>
         </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col header">
+        <h1>Cody's Simple Checklist</h1>
+        <p>1. Enter a task or item into the field, then press the button to add it.</p>
+        <p>2. When completed, tap/click the item and it will move to the "checked off" list. If you change your mind you can always put the item back.</p>
+        <p>3. To clear all checked items, simply hit the "Clear Checked Items" button.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col heading">
+        <h2><%=dayOfWeek%></h2>
       </div>
     </div>
   </div>
