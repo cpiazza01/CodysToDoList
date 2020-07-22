@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Cody's Simple Checklist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Fonts  -->
   <link
@@ -42,24 +43,26 @@
       <div class="col">
         <% for (var i = 0; i < listItems.length ; i++) { %>
         <div class="item">
-            <form class="" action="/" method="post">
-              <button type="submit" name="item" value="<%= listItems[i] %>" class="itemText btn"><%= listItems[i] %></label>
-            </form>
+          <form class="" action="/" method="post">
+            <button type="submit" name="item" value="<%= listItems[i] %>" class="itemText btn"><%= listItems[i] %></label>
+          </form>
         </div>
         <% } %>
       </div>
     </div>
     <hr>
+    <form class="" action="/" method="post">
     <div class="row">
-      <div class="col">
-        <form class="" action="/" method="post">
+        <div class="col-md-10">
           <div class="form-group">
             <input type="text" class="form-control" name="newItem" placeholder="New Item" required autocomplete="off">
-            <button type="submit" class="btn btn-add">+</button>
           </div>
-        </form>
-      </div>
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-add">+</button>
+        </div>
     </div>
+    </form>
     <div class="row">
       <div class="col">
         <br>
@@ -69,9 +72,9 @@
       <div class="col">
         <% for (var i = 0; i < listCheckedItems.length ; i++) { %>
         <div class="item">
-            <form class="" action="/" method="post">
-              <button type="submit" name="checkedItem" value="<%= listCheckedItems[i] %>" class="btn itemText item-checked"><%= listCheckedItems[i] %></label>
-            </form>
+          <form class="" action="/" method="post">
+            <button type="submit" name="checkedItem" value="<%= listCheckedItems[i] %>" class="btn itemText item-checked"><%= listCheckedItems[i] %></label>
+          </form>
         </div>
         <% } %>
       </div>

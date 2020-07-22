@@ -34,7 +34,7 @@ hr {
 
 .form-control {
   display: inline;
-  width: 80%;
+  width: 100%;
   margin: 10px auto;
   height: 40px;
   background-color: #fecb89;
@@ -62,7 +62,7 @@ hr {
   font-size: 3rem;
   height: 40px;
   line-height: 0;
-  margin: -2px 0 0;
+  margin: 9px 0 0 0;
   background-color: #fbe6d4;
   color: #ffa931;
   border: solid 2px #fecb89;
